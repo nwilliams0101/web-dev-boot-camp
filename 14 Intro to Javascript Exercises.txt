@@ -1,0 +1,5 @@
+//Examples of Alerts - copy and paste this into a console
+alert("Hello");
+alert("World");
+var myName = "Nic";
+alert(myName);

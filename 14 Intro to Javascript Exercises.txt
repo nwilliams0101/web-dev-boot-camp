@@ -3,3 +3,24 @@ alert("Hello");
 alert("World");
 var myName = "Nic";
 alert(myName);
+
+//Examples of a prompt
+var name = prompt("What is your name");
+var color = prompt("What is your favorite color?");
+alert(name + "'s favorite color is " + color);
+
+//Javascript Exercise 1
+function test() {
+    var a = "3";
+    var b = "8";
+    
+/***********Do not change the code above 👆*******/
+//Write your code on lines 7 - 9:
+var temp = a;
+a = b;
+b = temp;
+/***********Do not change the code below 👇*******/
+
+    console.log("a is " + a);
+    console.log("b is " + b);
+}

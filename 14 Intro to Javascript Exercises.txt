@@ -4,6 +4,7 @@ alert("World");
 var myName = "Nic";
 alert(myName);
 
+
 //Examples of a prompt
 var name = prompt("What is your name");
 var color = prompt("What is your favorite color?");
@@ -31,3 +32,135 @@ var message = "Hello";
 var myName = "Nic";
 var yourName = prompt(message + ", my name is " + myName + ". What is yours?");
 alert("Your name is " + yourName);
+
+
+//String length exercise
+var blurb = prompt("Please copy and paste a blurb to post on twitter:");
+var count = blurb.length;
+var limit = 140;
+var diff = limit-count;
+alert("Your blurb is " + count + " characters long. You have " + diff + " characters remaining.")
+
+
+//String Slice Exercises
+var blurb = prompt("Please copy and paste a blurb to post on twitter:");
+var count = blurb.length;
+var limit = 140;
+var diff = Math.abs(limit-count);
+var message = blurb.slice(0,140);
+alert("Your blurb is " + count + " characters long. This is " + diff + " characters over. Your new message is\n" + message);
+
+
+//String Casing Exercise
+var name = prompt("What is your name?").toLowerCase();
+var propername = name.slice(0,1).toUpperCase() + name.slice(1,name.length);
+alert("Hello there " + propername + "! Nice to meet you!");
+
+
+//Arithmetic in Javascript
+var dog = prompt("Let us see how old your dog is in human years! How old is your dog?");
+var human = (dog - 2) * 4 + 21;
+alert("Wow! Your dog is " + human + " years old in human years!");
+
+
+//Intro to functions
+function getMilk() {
+    console.log("go get milk from the store robot")
+}
+getMilk();
+
+
+//Karel Chessboard Challenge
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to 
+ * write any Karel program you want.
+ **/
+function main(){
+   fullRow();
+   leftUp();
+   halfRow();
+   rightUp();
+   fullRow();
+   leftUp();
+   halfRow();
+   rightUp();
+   fullRow();
+}
+function fullRow() {
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+}
+function leftUp() {
+   turnLeft();
+   move();
+   turnLeft();
+}
+function halfRow() {
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+}
+function rightUp() {
+   turnRight();
+   move();
+   turnRight();
+}
+
+
+//functions part 2: parameters and arguments
+function getMilk(bottles) {
+  var cost = bottles * 1.5
+  console.log("leaveHouse");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("buy " + bottles + " bottles of milk");
+  console.log("this costs $" + cost);
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("enterHouse");
+}
+getMilk(5);
+
+
+//Life in Weeks exercise
+function lifeInWeeks(age) {
+    /************Don't change the code above************/    
+
+    var years = 90-age;
+    var months = years * 12;
+    var weeks = years * 52;
+    var days = years * 365;
+    console.log("You have " + days + " days, " + weeks + " weeks, and " + months + " months left.");
+    /*************Don't change the code below**********/
+}
+lifeInWeeks(90);
+
+
+//BMI Calculator 
+function bmiCalculator(weight, height) {
+    return Math.round(weight / Math.pow(height, 2));
+}
+var bmi = bmiCalculator(65, 1.8); 
+
+

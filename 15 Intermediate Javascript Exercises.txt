@@ -1,0 +1,65 @@
+//Love Calculator (random number generator) exercise
+var name1 = prompt("What is your name?");
+var name2 = prompt("What is their name");
+var chance = Math.floor(Math.random() * 101);
+alert("You have a " + chance + "% chance of having a successful relationship with " + name2);
+
+
+//Control Statements: Using If-Else Conditionals & Logic & Comparators
+var name1 = "Nic";
+var name2 = "Allison";
+var chance = Math.floor(Math.random() * 101);
+if (chance === 100) {
+    alert("You all are a perfect match! You have a " + chance + "% chance of having a successful relationship with " + name2);
+}
+else if (chance >= 50 && chance < 100){
+    alert("You are likely to make a good couple! You have a " + chance + "% chance of having a successful relationship with " + name2);
+}
+else if (chance !== 0){
+    alert("It's possible. You have a " + chance + "% chance of having a successful relationship with " + name2);
+}
+else{
+    alert("run");
+}
+
+
+//Compartors exercise, BMI Calculator expansion
+function bmiCalculator(weight, height) {
+    var bmi = Math.round(weight / Math.pow(height, 2));
+    if (bmi < 18.5) {
+        var interpretation = "Your BMI is " + bmi + ", so you are underweight.";
+    }
+    else if (bmi >= 18.5 && bmi <= 24.9) {
+        var interpretation = "Your BMI is " + bmi + ", so you have a normal weight.";
+    }
+    else {
+        var interpretation = "Your BMI is " + bmi + ", so you are overweight.";
+    }
+    return interpretation;
+}
+var interp = bmiCalculator(65, 1.8);
+console.log(interp);
+
+
+//Leap Year Challenge Exercise
+function isLeap(year) {
+    var yes = "Leap year.";
+    var no = "Not leap year.";
+    
+    if(year % 4 == 0) {
+        if(year % 100 == 0) {
+            if(year % 400 ==0) {
+                return yes;
+            }
+            else
+                return no;
+        }
+        else {
+            return yes;
+        }
+    }
+    else
+        return no;
+}
+console.log(isLeap(2000));
+console.log(isLeap(2100));

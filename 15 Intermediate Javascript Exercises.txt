@@ -109,3 +109,13 @@ function fizzbuzz () {
     console.log(output);
     count++;
 }
+
+//Coding Exercise 6: Who's buying Lunch
+//Random name chosen from the list, returns output of who is buying Lunch
+function whosPaying(names) {
+    var string = null, int = 0;
+    int = Math.floor(Math.random() * (names.length));
+    string = names[int] + " is going to buy lunch today!";
+    console.log(string);
+    return string;
+}
